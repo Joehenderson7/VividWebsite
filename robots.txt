@@ -1,0 +1,13 @@
+# Vivid Engineering Group — PROTOTYPE robots.txt
+# Crawling is allowed so search engines can see the per-page
+# <meta name="robots" content="noindex"> tags (blocking crawl here
+# would hide the noindex and URLs could still get indexed bare).
+# AT vivideg.com CUTOVER: remove the noindex meta tags from all pages;
+# this file can stay as-is.
+
+User-agent: *
+Allow: /
+Disallow: /backend/
+Disallow: /feedback/
+
+Sitemap: https://www.vivideg.com/sitemap.xml

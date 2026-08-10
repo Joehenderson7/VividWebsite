@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vivid Engineering Group | Geotechnical · Environmental · Construction</title>
+<title>Construction Materials Testing & Geotechnical Engineering in Colorado | Vivid Engineering Group</title>
 <!--
   HOMEPAGE PROTOTYPE v2 — Vivid Engineering Group
   Now using the real brand palette (lime -> kelly green swoosh + charcoal, from the
@@ -24,11 +24,105 @@
       figures shown ($350M South Gap, 18 mi widening) come from the current
       site's project pages.
 -->
+<meta name="description" content="Construction materials testing, geotechnical engineering, inspection, and environmental services for CDOT, municipal, and energy projects across Colorado.">
+<!-- PROTOTYPE: remove the noindex line below at vivideg.com cutover -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://www.vivideg.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vivid Engineering Group">
+<meta property="og:title" content="Construction Materials Testing & Geotechnical Engineering in Colorado | Vivid Engineering Group">
+<meta property="og:description" content="Construction materials testing, geotechnical engineering, inspection, and environmental services for CDOT, municipal, and energy projects across Colorado.">
+<meta property="og:url" content="https://www.vivideg.com/">
+<meta property="og:image" content="https://www.vivideg.com/images/hero-central-70.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#24272B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="stylesheet" href="css/styles.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "ProfessionalService",
+ "@id": "https://www.vivideg.com/#organization",
+ "name": "Vivid Engineering Group, Inc.",
+ "alternateName": "Vivid Engineering",
+ "url": "https://www.vivideg.com/",
+ "logo": "https://www.vivideg.com/images/vivid-logo.jpg",
+ "image": "https://www.vivideg.com/images/hero-central-70.jpg",
+ "description": "Colorado construction-engineering firm providing construction materials testing, geotechnical engineering, construction inspection and owner acceptance testing, and environmental services for transportation, energy, government, and commercial clients.",
+ "foundingDate": "2016",
+ "sameAs": [
+  "https://www.linkedin.com/company/vivideg"
+ ],
+ "areaServed": {
+  "@type": "State",
+  "name": "Colorado"
+ },
+ "knowsAbout": [
+  "Construction materials testing",
+  "Geotechnical engineering",
+  "Construction inspection",
+  "Owner acceptance testing",
+  "CDOT quality assurance",
+  "Environmental site assessments",
+  "Soils, concrete, and asphalt laboratory testing"
+ ],
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "1053 Elkton Drive",
+  "addressLocality": "Colorado Springs",
+  "addressRegion": "CO",
+  "postalCode": "80907",
+  "addressCountry": "US"
+ },
+ "telephone": "+1-719-896-4356",
+ "location": [
+  {
+   "@type": "Place",
+   "name": "Vivid Engineering Group \u2014 Colorado Springs (HQ)",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1053 Elkton Drive",
+    "addressLocality": "Colorado Springs",
+    "addressRegion": "CO",
+    "postalCode": "80907",
+    "addressCountry": "US"
+   },
+   "telephone": "+1-719-896-4356"
+  },
+  {
+   "@type": "Place",
+   "name": "Vivid Engineering Group \u2014 Denver",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3885 Forest Street",
+    "addressLocality": "Denver",
+    "addressRegion": "CO",
+    "postalCode": "80207",
+    "addressCountry": "US"
+   },
+   "telephone": "+1-303-482-6937"
+  },
+  {
+   "@type": "Place",
+   "name": "Vivid Engineering Group \u2014 Pueblo West",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "621 E. Enterprise Drive",
+    "addressLocality": "Pueblo West",
+    "addressRegion": "CO",
+    "postalCode": "81007",
+    "addressCountry": "US"
+   },
+   "telephone": "+1-719-896-4356"
+  }
+ ]
+}
+</script>
 </head>
 <body data-page="home" data-page-label="Homepage">
 
@@ -38,8 +132,7 @@
 <header id="hdr">
   <div class="nav">
     <a class="logo" href="#top" aria-label="Vivid Engineering Group home">
-      <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-      <span class="logo-name">Vivid<small>Engineering Group</small></span>
+      <img decoding="async" src="images/logo-header.png" alt="" width="483" height="88">
     </a>
     <nav aria-label="Primary">
       <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navList">☰</button>
@@ -61,19 +154,19 @@
 
   <div class="slide active" data-proj="I-25 South Gap: Monument to Castle Rock" data-loc="Douglas County, CO">
     <div class="ph ph-1">
-      <img src="images/hero-south-gap.jpg" alt="Construction on the I-25 South Gap project" loading="eager" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')">
+      <img decoding="async" src="images/hero-south-gap.jpg" alt="Construction on the I-25 South Gap project" loading="eager" fetchpriority="high" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')">
     </div>
     <div class="scrim"></div>
   </div>
   <div class="slide" data-proj="SH 7 Permanent Repairs" data-loc="Boulder County, CO">
     <div class="ph ph-2">
-      <img src="images/project-sh7.jpg" alt="Vivid Engineering truck on the rebuilt SH 7 canyon highway" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')">
+      <img decoding="async" src="images/project-sh7.jpg" alt="Vivid Engineering truck on the rebuilt SH 7 canyon highway" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')">
     </div>
     <div class="scrim"></div>
   </div>
   <div class="slide" data-proj="Cheyenne Canyon Bridges" data-loc="Colorado Springs, CO">
     <div class="ph ph-3">
-      <img src="images/hero-cheyenne-canyon.jpg" alt="Cheyenne Canyon bridge construction" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')">
+      <img decoding="async" src="images/hero-cheyenne-canyon.jpg" alt="Cheyenne Canyon bridge construction" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')">
     </div>
     <div class="scrim"></div>
   </div>
@@ -81,7 +174,7 @@
   <div class="hero-inner">
     <p class="hero-kicker">Denver + Colorado Springs + Pueblo West · <b>Geotechnical / Environmental / Construction</b></p>
     <h1>Engineering from the <span class="accent">ground</span> up.</h1>
-    <p class="hero-sub">Vivid Engineering delivers cutting-edge geotechnical, environmental, and construction services to commercial, local, state, and federal partners across the Central and Western U.S.</p>
+    <p class="hero-sub">Vivid Engineering delivers geotechnical engineering, construction materials testing, inspection, and environmental services to commercial, local, state, and federal partners across Colorado and the Western U.S.</p>
     <div class="hero-actions">
       <a class="btn btn-solid" href="#services">Explore Our Services</a>
       <a class="btn btn-ghost" href="#projects">See Our Work</a>
@@ -155,8 +248,8 @@
       <a class="svc reveal" href="services.html#laboratory">
         <div class="svc-top"><span class="svc-code">SVC / LAB</span>
           <span class="svc-layer" aria-hidden="true"><i style="background:var(--st-shale)"></i><i style="background:var(--st-sand);width:75%"></i><i style="background:var(--st-rock);width:50%"></i></span></div>
-        <h3>Laboratory Materials Testing</h3>
-        <p>Soils, aggregate, concrete, asphalt, masonry, and shotcrete testing with fast turnaround from our Colorado laboratories.</p>
+        <h3>Construction Materials Testing</h3>
+        <p>Soils, aggregate, concrete, asphalt, masonry, and shotcrete testing with fast turnaround from our AASHTO-accredited Colorado laboratories.</p>
         <span class="svc-go">Learn more</span>
       </a>
     </div>
@@ -173,27 +266,27 @@
     </div>
     <div class="proj-grid">
       <a class="card reveal" href="project-central-70.html">
-        <div class="ph"><img src="images/project-central-70.jpg" alt="Central 70 lowered section" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div>
+        <div class="ph"><img decoding="async" src="images/project-central-70.jpg" alt="Central 70 lowered section" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div>
         <div class="cover"></div>
         <div class="txt"><span class="tag">Transportation · Urban</span><h3>Central 70 Project — Denver</h3></div>
       </a>
       <a class="card reveal" href="#">
-        <div class="ph"><img src="images/project-south-gap.jpg" alt="I-25 South Gap construction" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div>
+        <div class="ph"><img decoding="async" src="images/project-south-gap.jpg" alt="I-25 South Gap construction" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div>
         <div class="cover"></div>
         <div class="txt"><span class="tag">Transportation · CM/GC</span><h3>I-25 South Gap: Monument to Castle Rock</h3></div>
       </a>
       <a class="card reveal" href="#">
-        <div class="ph"><img src="images/hero-cheyenne-canyon.jpg" alt="Cheyenne Canyon bridges" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div>
+        <div class="ph"><img decoding="async" src="images/hero-cheyenne-canyon.jpg" alt="Cheyenne Canyon bridges" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div>
         <div class="cover"></div>
         <div class="txt"><span class="tag">Structures</span><h3>Cheyenne Canyon Bridges</h3></div>
       </a>
       <a class="card reveal" href="#">
-        <div class="ph"><img src="images/project-garden-of-gods.jpg" alt="Garden of the Gods flood mitigation facility" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div>
+        <div class="ph"><img decoding="async" src="images/project-garden-of-gods.jpg" alt="Garden of the Gods flood mitigation facility" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div>
         <div class="cover"></div>
         <div class="txt"><span class="tag">Government · Water</span><h3>Garden of the Gods Flood Mitigation Facility</h3></div>
       </a>
       <a class="card reveal" href="#">
-        <div class="ph"><img src="images/project-cimarron.jpg" alt="I-25 Cimarron interchange" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div>
+        <div class="ph"><img decoding="async" src="images/project-cimarron.jpg" alt="I-25 Cimarron interchange" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div>
         <div class="cover"></div>
         <div class="txt"><span class="tag">Transportation · Design-Build</span><h3>I-25 / Cimarron Interchange — Colorado Springs</h3></div>
       </a>
@@ -221,7 +314,7 @@
 <!-- ============ CAREERS ============ -->
 <section class="careers" id="careers">
   <div class="bgimg" aria-hidden="true">
-    <img src="images/team-crew.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')">
+    <img decoding="async" src="images/team-crew.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')">
   </div>
   <div class="bgscrim" aria-hidden="true"></div>
   <div class="wrap">
@@ -243,7 +336,7 @@
     <div class="ft-top">
       <div class="ft-brand">
         <a class="ft-logo" href="#top" aria-label="Vivid Engineering Group home">
-          <img src="images/vivid-logo.jpg" alt="Vivid Engineering Group logo" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')">
+          <img decoding="async" src="images/vivid-logo.jpg" alt="Vivid Engineering Group logo" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')">
         </a>
         <p>Cutting-edge geotechnical, environmental, and construction services across the Central and Western U.S.</p>
         <div class="badges">

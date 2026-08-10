@@ -521,3 +521,7 @@
   /* closed feedback panel: remove from tab order (transform alone keeps it focusable) */
   .fb-panel{visibility:hidden;transition:transform .3s ease,visibility 0s .3s}
   .fb-panel.open{visibility:visible;transition:transform .3s ease,visibility 0s}
+
+  /* ---- header logo image (replaces CSS mark + text lockup) ---- */
+  .logo img{display:block;height:44px;width:auto}
+  @media (max-width:600px){.logo img{height:36px}}
