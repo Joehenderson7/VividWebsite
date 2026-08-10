@@ -465,3 +465,59 @@
   .cn-decline{background:none;border:0;color:#9CA2AB;font-size:12.5px;cursor:pointer;text-decoration:underline;padding:0}
   .cn-decline:hover{color:#fff}
   @media (max-width:600px){.cookie-notice{left:12px;right:88px;bottom:12px;max-width:none}}
+
+  /* ===== accessibility patch (WCAG 2.1 AA) — 2026-08-09 =====
+     Overrides live at the end of the file so they win the cascade over the
+     duplicated theme blocks above. Brand notes:
+     · --green (#1FA24D) stays for decorative art (strata swoosh, logo mark,
+       gradients). It fails 4.5:1 against white, so TEXT + buttons now use
+       --green-ui (#12813B), the same kelly hue darkened to pass AA (4.97:1). */
+  :root{--green-ui:#12813B;--green-ui-deep:#0C5F2C}
+
+  /* white-on-green interactive elements (were 3.31:1, now 4.97:1) */
+  .nav-cta{background:var(--green-ui)}
+  .nav-cta:hover{background:var(--green-ui-deep)}
+  .btn-solid{background:var(--green-ui)}
+  .btn-solid:hover{background:var(--green-ui-deep)}
+  .fb-toggle{background:var(--green-ui)}
+  .fb-toggle:hover{background:var(--green-ui-deep)}
+  ::selection{background:var(--green-ui);color:#fff}
+
+  /* green text on white/paper backgrounds */
+  .eyebrow{color:var(--green-ui)}
+  .dark .eyebrow,.projects .eyebrow{color:var(--lime)} /* lime is 8.1:1 on charcoal */
+  .svc-go,.office .mono,.office a,.tcard .role,.fb-item .where{color:var(--green-ui)}
+  .btn-ghost:hover{border-color:var(--green-ui);color:var(--green-ui)}
+  .dark .btn-ghost:hover,.hero .btn-ghost:hover{border-color:var(--lime);color:#fff}
+  .fb-ghostbtn:hover{border-color:var(--green-ui);color:var(--green-ui)}
+
+  /* footer fine print (was 4.23:1 on charcoal, now 5.87:1) */
+  .ft-bottom{color:#9AA3AD}
+
+  /* footer headings are now real h3s (heading order); keep the old h4 look */
+  .ft-top h3.ft-h{font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-size:16px;font-weight:700;color:#fff;margin-bottom:16px}
+
+  /* links inside text blocks: don't rely on color alone */
+  address a,.office a{text-decoration:underline;text-underline-offset:2px}
+  .page-hero .crumb a{text-decoration:underline;text-underline-offset:2px}
+
+  /* hero carousel dots: visible against photos (was .32 alpha) */
+  .dot{background:rgba(255,255,255,.55)}
+
+  /* visible keyboard focus everywhere */
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--green-ui);outline-offset:2px}
+  header a:focus-visible,header button:focus-visible,footer a:focus-visible,.dark a:focus-visible,.dark button:focus-visible,.hero a:focus-visible,.hero button:focus-visible,.fb-toggle:focus-visible,.cookie-notice button:focus-visible{outline-color:var(--lime)}
+
+  /* skip link */
+  .skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--charcoal);color:#fff;padding:12px 22px;font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-weight:600;text-decoration:none}
+  .skip-link:focus{left:0}
+
+  /* screen-reader-only utility */
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+  /* eyebrow promoted to h2 on contact page — keep the small mono look */
+  h2.eyebrow{font-weight:500}
+
+  /* closed feedback panel: remove from tab order (transform alone keeps it focusable) */
+  .fb-panel{visibility:hidden;transition:transform .3s ease,visibility 0s .3s}
+  .fb-panel.open{visibility:visible;transition:transform .3s ease,visibility 0s}

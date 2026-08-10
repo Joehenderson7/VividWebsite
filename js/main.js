@@ -58,6 +58,14 @@
     }
     function auto(){ timer = setInterval(() => show((cur+1)%slides.length), 6000); }
     dots.forEach((d,i) => d.addEventListener("click", () => { clearInterval(timer); show(i); if(!reduce) auto(); }));
+    // pause auto-rotation while the hero is hovered or holds keyboard focus (WCAG 2.2.2)
+    const hero = document.querySelector(".hero");
+    if(hero && !reduce){
+      hero.addEventListener("mouseenter", () => clearInterval(timer));
+      hero.addEventListener("mouseleave", () => { clearInterval(timer); auto(); });
+      hero.addEventListener("focusin", () => clearInterval(timer));
+      hero.addEventListener("focusout", () => { clearInterval(timer); auto(); });
+    }
     if(!reduce) auto();
   }
 })();

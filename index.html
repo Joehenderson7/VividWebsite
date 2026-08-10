@@ -32,6 +32,8 @@
 </head>
 <body data-page="home" data-page-label="Homepage">
 
+<a class="skip-link" href="#main">Skip to main content</a>
+
 <!-- ================= NAV ================= -->
 <header id="hdr">
   <div class="nav">
@@ -40,7 +42,7 @@
       <span class="logo-name">Vivid<small>Engineering Group</small></span>
     </a>
     <nav aria-label="Primary">
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navList">☰</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navList">☰</button>
       <ul id="navList">
         <li><a href="services.html">Services</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -51,6 +53,8 @@
     </nav>
   </div>
 </header>
+
+<main id="main">
 
 <!-- ============ HERO — full-screen rotating photo panel ============ -->
 <section class="hero" id="top" aria-label="Featured projects">
@@ -84,7 +88,7 @@
     </div>
   </div>
 
-  <div class="hero-meta" aria-live="polite">
+  <div class="hero-meta">
     <span class="proj" id="metaProj">I-25 South Gap: Monument to Castle Rock</span>
     <span class="loc" id="metaLoc">Douglas County, CO</span>
   </div>
@@ -231,6 +235,8 @@
 </section>
 
 <!-- ============ FOOTER ============ -->
+</main>
+
 <footer id="contact">
   <div class="strata" aria-hidden="true"><span class="s5"></span><span class="s4"></span><span class="s3"></span><span class="s2"></span><span class="s1"></span><span class="sv"></span></div>
   <div class="wrap">
@@ -252,7 +258,7 @@
         </a>
       </div>
       <div>
-        <h4>Explore</h4>
+        <h3 class="ft-h">Explore</h3>
         <ul>
           <li><a href="services.html">Our Services</a></li>
           <li><a href="projects.html">Projects</a></li>
@@ -262,15 +268,15 @@
         </ul>
       </div>
       <div>
-        <h4>Denver</h4>
+        <h3 class="ft-h">Denver</h3>
         <address>3885 Forest Street<br>Denver, CO 80207<br><a href="tel:3034826937">303.482.6937</a></address>
       </div>
       <div>
-        <h4>Colorado Springs</h4>
+        <h3 class="ft-h">Colorado Springs</h3>
         <address>1053 Elkton Drive<br>Colorado Springs, CO 80907<br><a href="tel:7198964356">(719) 896-4356</a></address>
       </div>
       <div>
-        <h4>Pueblo West</h4>
+        <h3 class="ft-h">Pueblo West</h3>
         <address>621 E. Enterprise Drive<br>Pueblo West, CO 81007<br><a href="tel:7198964356">(719) 896-4356</a></address>
       </div>
     </div>

@@ -11,11 +11,13 @@
   const PAGE_FILES = {
     "home":"index.html","services":"services.html","projects":"projects.html",
     "central-70":"project-central-70.html","sh7":"project-sh7.html","co119":"project-co119.html",
+    "powerpathway":"project-powerpathway.html",
     "team":"team.html","careers":"careers.html","contact":"contact.html"
   };
   const PAGE_LABELS = {
     "home":"Homepage","services":"Services","projects":"Projects",
     "central-70":"Central 70 Detail","sh7":"SH 7 Detail","co119":"CO 119 Detail",
+    "powerpathway":"Power Pathway Detail",
     "team":"Our Team","careers":"Careers","contact":"Contact"
   };
 
@@ -24,8 +26,9 @@
 
   // ---- inject markup ----
   document.body.insertAdjacentHTML("beforeend", `
-<button class="fb-toggle" id="fbToggle" aria-controls="fbPanel">\u{1F4AC} Feedback <span class="cnt" id="fbCount">\u2013</span></button>
-<aside class="fb-panel" id="fbPanel" aria-label="Design feedback">
+<aside aria-label="Design feedback">
+<button class="fb-toggle" id="fbToggle" aria-controls="fbPanel" aria-expanded="false"><span aria-hidden="true">\u{1F4AC}</span> Feedback <span class="cnt" id="fbCount" aria-label="comment count">\u2013</span></button>
+<div class="fb-panel" id="fbPanel">
   <div class="fb-head"><h3>Design Feedback</h3><button class="close" id="fbClose" aria-label="Close feedback panel">\u2715</button></div>
   <div class="fb-body">
     <p class="fb-note"><strong>Shared with everyone:</strong> comments are posted to this site and visible to anyone with the link. They're tagged to the page you're viewing.</p>
@@ -37,10 +40,11 @@
       <button class="btn btn-solid" type="button" id="fbPost">Post Comment</button>
       <button class="fb-ghostbtn" type="button" id="fbRefresh">Refresh Comments</button>
       <button class="fb-ghostbtn" type="button" id="fbExport">Copy All Comments</button>
-      <p class="fb-status" id="fbStatus"></p>
+      <p class="fb-status" id="fbStatus" role="status"></p>
     </div>
     <div class="fb-list" id="fbList"><p class="fb-empty">Open the panel to load comments.</p></div>
   </div>
+</div>
 </aside>
 <div class="cookie-notice" id="cookieNotice" role="dialog" aria-label="Storage notice">
   <div class="cn-label">Notice</div>
@@ -140,10 +144,14 @@
     renderComments(all);
   }
 
-  document.getElementById("fbClose").addEventListener("click", () => { fbOpen = false; panel.classList.remove("open"); });
+  document.getElementById("fbClose").addEventListener("click", () => {
+    fbOpen = false; panel.classList.remove("open");
+    toggleBtn.setAttribute("aria-expanded","false"); toggleBtn.focus();
+  });
   toggleBtn.addEventListener("click", () => {
     fbOpen = !fbOpen;
     panel.classList.toggle("open", fbOpen);
+    toggleBtn.setAttribute("aria-expanded", String(fbOpen));
     if(fbOpen){
       const nameInput = document.getElementById("fbName");
       if(store && rememberName && !nameInput.value){
@@ -153,6 +161,12 @@
     }
   });
   document.getElementById("fbRefresh").addEventListener("click", refresh);
+  document.addEventListener("keydown", e => {
+    if(e.key === "Escape" && fbOpen){
+      fbOpen = false; panel.classList.remove("open");
+      toggleBtn.setAttribute("aria-expanded","false"); toggleBtn.focus();
+    }
+  });
 
   document.getElementById("fbPost").addEventListener("click", async () => {
     const name = document.getElementById("fbName").value.trim();
