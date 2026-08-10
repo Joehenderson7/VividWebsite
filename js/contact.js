@@ -4,8 +4,8 @@
 // are NOT readable through the site (explicit deny in the bucket policy);
 // the site owner reads them in the S3 console.
 //
-// Production upgrade: deploy backend/lambda_contact_handler.py (see
-// backend/SETUP-LAMBDA-SES.md), then set LAMBDA_ENDPOINT to the Function URL
+// Production upgrade: deploy docs/backend/lambda_contact_handler.py (see
+// docs/backend/SETUP-LAMBDA-SES.md), then set LAMBDA_ENDPOINT to the Function URL
 // below — the form switches to emailed delivery automatically.
 (function(){
   "use strict";

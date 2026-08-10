@@ -1,6 +1,6 @@
 // Vivid Engineering — shared design feedback
 // Comments are stored in feedback/comments.json in the site's own S3 bucket.
-// The bucket policy allows public PUT on that single object (see DEPLOY.md),
+// The bucket policy allows public PUT on that single object (see docs/DEPLOY.md),
 // so every reviewer sees the same thread. Prototype-grade by design:
 // last-write-wins, and anyone with the link could clear the file.
 (function(){
@@ -11,16 +11,16 @@
   const PAGE_FILES = {
     "home":"/","services":"/services","laboratory":"/laboratory-materials-testing","geotechnical":"/geotechnical-geological-engineering",
     "inspection":"/construction-inspection-and-materials-testing","environmental":"/environmental-services","projects":"/projects",
-    "central-70":"/project-central-70","sh7":"/project-sh7","co119":"/project-co119",
-    "powerpathway":"/project-powerpathway","estesloop":"/project-estesloop","chiefhosa":"/project-chiefhosa","floydhill":"/project-floydhill",
+    "central-70":"/project-central-70","sh-7":"/project-sh-7","co-119":"/project-co-119",
+    "power-pathway":"/project-power-pathway","estes-loop":"/project-estes-loop","chief-hosa":"/project-chief-hosa","floyd-hill":"/project-floyd-hill",
     "team":"/team","careers":"/careers","contact":"/contact",
     "privacy":"/privacy-policy"
   };
   const PAGE_LABELS = {
     "home":"Homepage","services":"Services","laboratory":"Laboratory Testing","geotechnical":"Geotechnical",
     "inspection":"Inspection & Testing","environmental":"Environmental","projects":"Projects",
-    "central-70":"Central 70 Detail","sh7":"SH 7 Detail","co119":"CO 119 Detail",
-    "powerpathway":"Power Pathway Detail","estesloop":"Estes Loop Detail","chiefhosa":"Chief Hosa Detail","floydhill":"Floyd Hill Detail",
+    "central-70":"Central 70 Detail","sh-7":"SH 7 Detail","co-119":"CO 119 Detail",
+    "power-pathway":"Power Pathway Detail","estes-loop":"Estes Loop Detail","chief-hosa":"Chief Hosa Detail","floyd-hill":"Floyd Hill Detail",
     "team":"Our Team","careers":"Careers","contact":"Contact",
     "privacy":"Privacy Policy"
   };
@@ -132,7 +132,7 @@
       const latest = await loadComments();
       const arr = (latest === null ? cache : latest).filter(c => String(c.id) !== b.dataset.del);
       const ok = await saveComments(arr);
-      statusEl.textContent = ok ? "Removed." : "Couldn't update the shared thread \u2014 see DEPLOY.md (feedback storage).";
+      statusEl.textContent = ok ? "Removed." : "Couldn't update the shared thread \u2014 see docs/DEPLOY.md (feedback storage).";
       refresh();
     }));
   }
@@ -142,7 +142,7 @@
     const all = await loadComments();
     if(all === null){
       cntEl.textContent = "!";
-      listEl.innerHTML = '<p class="fb-empty">Couldn\u2019t load the shared feedback file. If this is a fresh deployment, make sure feedback/comments.json was uploaded (see DEPLOY.md).</p>';
+      listEl.innerHTML = '<p class="fb-empty">Couldn\u2019t load the shared feedback file. If this is a fresh deployment, make sure feedback/comments.json was uploaded (see docs/DEPLOY.md).</p>';
       return;
     }
     renderComments(all);
@@ -186,7 +186,7 @@
       statusEl.textContent = "Posted \u2014 visible to everyone with the link.";
       document.getElementById("fbText").value = "";
     } else {
-      statusEl.textContent = "Couldn't publish \u2014 feedback storage may not be configured yet (see DEPLOY.md). Your text is kept above; copy it to send directly.";
+      statusEl.textContent = "Couldn't publish \u2014 feedback storage may not be configured yet (see docs/DEPLOY.md). Your text is kept above; copy it to send directly.";
     }
     refresh();
   });

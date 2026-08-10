@@ -1,0 +1,11 @@
+# Local-only staging area (files pulled out of the repo but kept on disk)
+_local/
+_to_delete/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Stray git lock files (GitHub Desktop / device-bridge artifact)
+*.lock
