@@ -9,14 +9,14 @@
   const PAGE = document.body.dataset.page || "home";
   const PAGE_LABEL = document.body.dataset.pageLabel || "Homepage";
   const PAGE_FILES = {
-    "home":"/","services":"/services","projects":"/projects",
+    "home":"/","services":"/services","laboratory":"/laboratory-materials-testing","projects":"/projects",
     "central-70":"/project-central-70","sh7":"/project-sh7","co119":"/project-co119",
     "powerpathway":"/project-powerpathway",
     "team":"/team","careers":"/careers","contact":"/contact",
     "privacy":"/privacy-policy"
   };
   const PAGE_LABELS = {
-    "home":"Homepage","services":"Services","projects":"Projects",
+    "home":"Homepage","services":"Services","laboratory":"Laboratory Testing","projects":"Projects",
     "central-70":"Central 70 Detail","sh7":"SH 7 Detail","co119":"CO 119 Detail",
     "powerpathway":"Power Pathway Detail",
     "team":"Our Team","careers":"Careers","contact":"Contact",
