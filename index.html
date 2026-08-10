@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vivid Engineering Group | Geotechnical · Environmental · Construction</title>
+<!--
+  HOMEPAGE PROTOTYPE v2 — Vivid Engineering Group
+  Now using the real brand palette (lime -> kelly green swoosh + charcoal, from the
+  Vivid logo) and real photography hotlinked from the current vivideg.com site.
+
+  Design direction from Steve's email:
+    · PCL Construction  → full-screen photography, very user friendly
+    · West Monroe       → big bold stats about the company
+    · AECOM             → scrolling photo/info panel up top, LinkedIn at bottom
+
+  HANDOFF NOTES:
+    · Photos are hotlinked from the existing Squarespace CDN. For production,
+      re-host them (or export originals from Squarespace) — hotlinks can break
+      if the old site is taken down.
+    · Two project cards (Garden of the Gods, Cimarron) have no photos on the
+      current site's homepage — they remain labeled placeholders.
+    · Stats are PLACEHOLDERS — confirm real numbers with Steve. The two real
+      figures shown ($350M South Gap, 18 mi widening) come from the current
+      site's project pages.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home" data-page-label="Homepage">
+
+<!-- ================= NAV ================= -->
+<header id="hdr">
+  <div class="nav">
+    <a class="logo" href="#top" aria-label="Vivid Engineering Group home">
+      <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="logo-name">Vivid<small>Engineering Group</small></span>
+    </a>
+    <nav aria-label="Primary">
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navList">☰</button>
+      <ul id="navList">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO — full-screen rotating photo panel ============ -->
+<section class="hero" id="top" aria-label="Featured projects">
+
+  <div class="slide active" data-proj="I-25 South Gap: Monument to Castle Rock" data-loc="Douglas County, CO">
+    <div class="ph ph-1">
+      <img src="images/hero-south-gap.jpg" alt="Construction on the I-25 South Gap project" loading="eager" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')">
+    </div>
+    <div class="scrim"></div>
+  </div>
+  <div class="slide" data-proj="SH 7 Permanent Repairs" data-loc="Boulder County, CO">
+    <div class="ph ph-2">
+      <img src="images/project-sh7.jpg" alt="Vivid Engineering truck on the rebuilt SH 7 canyon highway" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')">
+    </div>
+    <div class="scrim"></div>
+  </div>
+  <div class="slide" data-proj="Cheyenne Canyon Bridges" data-loc="Colorado Springs, CO">
+    <div class="ph ph-3">
+      <img src="images/hero-cheyenne-canyon.jpg" alt="Cheyenne Canyon bridge construction" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')">
+    </div>
+    <div class="scrim"></div>
+  </div>
+
+  <div class="hero-inner">
+    <p class="hero-kicker">Denver + Colorado Springs + Pueblo West · <b>Geotechnical / Environmental / Construction</b></p>
+    <h1>Engineering from the <span class="accent">ground</span> up.</h1>
+    <p class="hero-sub">Vivid Engineering delivers cutting-edge geotechnical, environmental, and construction services to commercial, local, state, and federal partners across the Central and Western U.S.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#services">Explore Our Services</a>
+      <a class="btn btn-ghost" href="#projects">See Our Work</a>
+    </div>
+  </div>
+
+  <div class="hero-meta" aria-live="polite">
+    <span class="proj" id="metaProj">I-25 South Gap: Monument to Castle Rock</span>
+    <span class="loc" id="metaLoc">Douglas County, CO</span>
+  </div>
+
+  <div class="hero-ctl" role="tablist" aria-label="Hero slides">
+    <button class="dot active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+    <button class="dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+    <button class="dot" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+  </div>
+
+  <span class="scroll-cue">Scroll</span>
+  <div class="strata" aria-hidden="true"><span class="sv"></span><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span><span class="s5"></span></div>
+</section>
+
+<!-- ============ STATS BAND ============ -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-head reveal">
+      <div>
+        <span class="eyebrow">Why Vivid</span>
+        <h2>A fast-growing Colorado firm,<br>built on solid ground.</h2>
+      </div>
+      <p class="lead" style="max-width:38ch">From boring logs to bridge decks, our teams support the region's most demanding infrastructure programs.</p>
+    </div>
+    <!-- $350M and 18 mi come from the current site's South Gap page; the others are placeholders to confirm -->
+    <div class="stats-grid">
+      <div class="stat reveal"><span class="num"><sup style="font-size:.5em;color:var(--green);vertical-align:top">$</sup><span class="count" data-target="350">0</span><span style="font-size:.5em">M</span></span><span class="lbl">Largest Program Supported</span></div>
+      <div class="stat reveal"><span class="num"><span class="count" data-target="18">0</span><span style="font-size:.5em"> MI</span></span><span class="lbl">Of I-25 Widening Tested</span></div>
+      <div class="stat reveal"><span class="num"><span class="count" data-target="4">0</span></span><span class="lbl">Core Service Lines</span></div>
+      <div class="stat reveal"><span class="num"><span class="count" data-target="3">0</span></span><span class="lbl">Colorado Offices</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Four disciplines.<br>One integrated team.</h2>
+    </div>
+    <div class="svc-grid">
+      <a class="svc reveal" href="services.html#geotechnical">
+        <div class="svc-top"><span class="svc-code">SVC / GEO</span>
+          <span class="svc-layer" aria-hidden="true"><i style="background:var(--st-fill)"></i><i style="background:var(--st-clay);width:75%"></i><i style="background:var(--st-rock);width:50%"></i></span></div>
+        <h3>Geotechnical / Geological Engineering</h3>
+        <p>Subsurface investigations, foundation design, slope stability, and pavement recommendations that de-risk projects before the first shovel hits dirt.</p>
+        <span class="svc-go">Learn more</span>
+      </a>
+      <a class="svc reveal" href="services.html#inspection">
+        <div class="svc-top"><span class="svc-code">SVC / CIT</span>
+          <span class="svc-layer" aria-hidden="true"><i style="background:linear-gradient(90deg,var(--lime),var(--green))"></i><i style="background:var(--st-shale);width:75%"></i><i style="background:var(--st-rock);width:50%"></i></span></div>
+        <h3>Construction Inspection &amp; Testing</h3>
+        <p>Owner-acceptance inspection and materials testing that keep CDOT and municipal projects on spec, on schedule, and fully documented.</p>
+        <span class="svc-go">Learn more</span>
+      </a>
+      <a class="svc reveal" href="services.html#environmental">
+        <div class="svc-top"><span class="svc-code">SVC / ENV</span>
+          <span class="svc-layer" aria-hidden="true"><i style="background:var(--st-sand)"></i><i style="background:var(--st-clay);width:75%"></i><i style="background:var(--st-rock);width:50%"></i></span></div>
+        <h3>Environmental Services</h3>
+        <p>Site assessments, permitting support, and environmental compliance for energy, transportation, and development clients.</p>
+        <span class="svc-go">Learn more</span>
+      </a>
+      <a class="svc reveal" href="services.html#laboratory">
+        <div class="svc-top"><span class="svc-code">SVC / LAB</span>
+          <span class="svc-layer" aria-hidden="true"><i style="background:var(--st-shale)"></i><i style="background:var(--st-sand);width:75%"></i><i style="background:var(--st-rock);width:50%"></i></span></div>
+        <h3>Laboratory Materials Testing</h3>
+        <p>Soils, aggregate, concrete, asphalt, masonry, and shotcrete testing with fast turnaround from our Colorado laboratories.</p>
+        <span class="svc-go">Learn more</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED PROJECTS ============ -->
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--lime)">Featured Work</span>
+      <h2>Proven on Colorado's<br>biggest corridors.</h2>
+      <p class="lead" style="margin-top:18px">Our fieldwork, inspection, and lab teams have supported some of the state's most complex transportation programs.</p>
+    </div>
+    <div class="proj-grid">
+      <a class="card reveal" href="project-central-70.html">
+        <div class="ph"><img src="images/project-central-70.jpg" alt="Central 70 lowered section" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div>
+        <div class="cover"></div>
+        <div class="txt"><span class="tag">Transportation · Urban</span><h3>Central 70 Project — Denver</h3></div>
+      </a>
+      <a class="card reveal" href="#">
+        <div class="ph"><img src="images/project-south-gap.jpg" alt="I-25 South Gap construction" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div>
+        <div class="cover"></div>
+        <div class="txt"><span class="tag">Transportation · CM/GC</span><h3>I-25 South Gap: Monument to Castle Rock</h3></div>
+      </a>
+      <a class="card reveal" href="#">
+        <div class="ph"><img src="images/hero-cheyenne-canyon.jpg" alt="Cheyenne Canyon bridges" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div>
+        <div class="cover"></div>
+        <div class="txt"><span class="tag">Structures</span><h3>Cheyenne Canyon Bridges</h3></div>
+      </a>
+      <a class="card reveal" href="#">
+        <div class="ph"><img src="images/project-garden-of-gods.jpg" alt="Garden of the Gods flood mitigation facility" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div>
+        <div class="cover"></div>
+        <div class="txt"><span class="tag">Government · Water</span><h3>Garden of the Gods Flood Mitigation Facility</h3></div>
+      </a>
+      <a class="card reveal" href="#">
+        <div class="ph"><img src="images/project-cimarron.jpg" alt="I-25 Cimarron interchange" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')"></div>
+        <div class="cover"></div>
+        <div class="txt"><span class="tag">Transportation · Design-Build</span><h3>I-25 / Cimarron Interchange — Colorado Springs</h3></div>
+      </a>
+    </div>
+    <div class="proj-more reveal"><a class="btn btn-ghost" href="projects.html">View All Projects</a></div>
+  </div>
+</section>
+
+<!-- ============ MARKETS ============ -->
+<section class="markets" id="markets">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Who We Serve</span>
+      <h2>Markets we know inside and out.</h2>
+    </div>
+    <div class="mk-row">
+      <div class="mk reveal"><span class="mono">MKT / 01</span><h3>Transportation</h3><p>Highways, interchanges, and bridges for CDOT and design-build teams.</p></div>
+      <div class="mk reveal"><span class="mono">MKT / 02</span><h3>Energy</h3><p>Geotechnical and environmental support for power and utility infrastructure.</p></div>
+      <div class="mk reveal"><span class="mono">MKT / 03</span><h3>Government</h3><p>Local, state, and federal projects delivered with small-business agility.</p></div>
+      <div class="mk reveal"><span class="mono">MKT / 04</span><h3>Commercial</h3><p>Site investigations and testing for developers and private owners.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAREERS ============ -->
+<section class="careers" id="careers">
+  <div class="bgimg" aria-hidden="true">
+    <img src="images/team-crew.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')">
+  </div>
+  <div class="bgscrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--lime)">Join Our Team</span>
+      <h2>Build your career on a strong foundation.</h2>
+      <p>Our people are the foundation of our success. Whether you're an experienced professional or just starting out, Vivid offers a collaborative environment where innovation, growth, and opportunity thrive.</p>
+    </div>
+    <a class="btn btn-solid reveal" href="careers.html">Explore Opportunities</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contact">
+  <div class="strata" aria-hidden="true"><span class="s5"></span><span class="s4"></span><span class="s3"></span><span class="s2"></span><span class="s1"></span><span class="sv"></span></div>
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <a class="ft-logo" href="#top" aria-label="Vivid Engineering Group home">
+          <img src="images/vivid-logo.jpg" alt="Vivid Engineering Group logo" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('.jpg','.svg')">
+        </a>
+        <p>Cutting-edge geotechnical, environmental, and construction services across the Central and Western U.S.</p>
+        <div class="badges">
+          <span class="badge">CDOT ESB</span>
+          <span class="badge">City of Denver SBE</span>
+          <span class="badge">Buy Colorado</span>
+        </div>
+        <!-- AECOM-style LinkedIn connection -->
+        <a class="li-btn" href="https://www.linkedin.com/company/vivideg" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Denver</h4>
+        <address>3885 Forest Street<br>Denver, CO 80207<br><a href="tel:3034826937">303.482.6937</a></address>
+      </div>
+      <div>
+        <h4>Colorado Springs</h4>
+        <address>1053 Elkton Drive<br>Colorado Springs, CO 80907<br><a href="tel:7198964356">(719) 896-4356</a></address>
+      </div>
+      <div>
+        <h4>Pueblo West</h4>
+        <address>621 E. Enterprise Drive<br>Pueblo West, CO 81007<br><a href="tel:7198964356">(719) 896-4356</a></address>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2026 Vivid Engineering Group, Inc.</span>
+      <span><a href="#" style="text-decoration:none">Privacy Policy</a> · @vividenggrp</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/main.js"></script>
+<script src="js/feedback.js"></script>
+</body>
+</html>

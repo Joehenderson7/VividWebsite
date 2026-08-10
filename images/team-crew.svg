@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="PHOTO: VIVID TEAM">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B3340"/><stop offset=".55" stop-color="#57616F"/><stop offset="1" stop-color="#2A2E35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <g>
+    <rect x="0" y="854" width="192" height="14" fill="#AECB37"/>
+    <rect x="192" y="854" width="320" height="14" fill="#C8B08A"/>
+    <rect x="512" y="854" width="288" height="14" fill="#A9714B"/>
+    <rect x="800" y="854" width="288" height="14" fill="#D9A441"/>
+    <rect x="1088" y="854" width="256" height="14" fill="#7A8087"/>
+    <rect x="1344" y="854" width="256" height="14" fill="#3E444D"/>
+  </g>
+  <rect x="40" y="36" width="284" height="54" fill="rgba(20,22,25,.45)" stroke="rgba(255,255,255,.4)" stroke-dasharray="6 5"/>
+  <text x="62" y="70" font-family="monospace" font-size="22" letter-spacing="2" fill="rgba(255,255,255,.75)">PHOTO: VIVID TEAM</text>
+</svg>
