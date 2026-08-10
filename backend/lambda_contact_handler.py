@@ -18,7 +18,7 @@ import boto3
 
 ses = boto3.client("ses")
 
-TO_ADDRESS = os.environ.get("TO_ADDRESS", "jhenderson@vivideg.com")
+TO_ADDRESS = os.environ.get("TO_ADDRESS", "joehenderson7@gmail.com")
 FROM_ADDRESS = os.environ.get("FROM_ADDRESS", TO_ADDRESS)
 ALLOWED_ORIGIN = os.environ.get("ALLOWED_ORIGIN", "https://d2t2dn2a26uq4h.cloudfront.net")
 
