@@ -12,7 +12,7 @@
     "home":"/","services":"/services","laboratory":"/laboratory-materials-testing","geotechnical":"/geotechnical-geological-engineering",
     "inspection":"/construction-inspection-and-materials-testing","environmental":"/environmental-services","projects":"/projects",
     "central-70":"/project-central-70","sh7":"/project-sh7","co119":"/project-co119",
-    "powerpathway":"/project-powerpathway","estesloop":"/project-estesloop",
+    "powerpathway":"/project-powerpathway","estesloop":"/project-estesloop","chiefhosa":"/project-chiefhosa",
     "team":"/team","careers":"/careers","contact":"/contact",
     "privacy":"/privacy-policy"
   };
@@ -20,7 +20,7 @@
     "home":"Homepage","services":"Services","laboratory":"Laboratory Testing","geotechnical":"Geotechnical",
     "inspection":"Inspection & Testing","environmental":"Environmental","projects":"Projects",
     "central-70":"Central 70 Detail","sh7":"SH 7 Detail","co119":"CO 119 Detail",
-    "powerpathway":"Power Pathway Detail","estesloop":"Estes Loop Detail",
+    "powerpathway":"Power Pathway Detail","estesloop":"Estes Loop Detail","chiefhosa":"Chief Hosa Detail",
     "team":"Our Team","careers":"Careers","contact":"Contact",
     "privacy":"Privacy Policy"
   };
