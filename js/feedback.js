@@ -9,10 +9,10 @@
   const PAGE = document.body.dataset.page || "home";
   const PAGE_LABEL = document.body.dataset.pageLabel || "Homepage";
   const PAGE_FILES = {
-    "home":"index.html","services":"services.html","projects":"projects.html",
-    "central-70":"project-central-70.html","sh7":"project-sh7.html","co119":"project-co119.html",
-    "powerpathway":"project-powerpathway.html",
-    "team":"team.html","careers":"careers.html","contact":"contact.html"
+    "home":"/","services":"/services","projects":"/projects",
+    "central-70":"/project-central-70","sh7":"/project-sh7","co119":"/project-co119",
+    "powerpathway":"/project-powerpathway",
+    "team":"/team","careers":"/careers","contact":"/contact"
   };
   const PAGE_LABELS = {
     "home":"Homepage","services":"Services","projects":"Projects",
@@ -113,7 +113,7 @@
     const item = c => `
       <div class="fb-item">
         <div class="meta"><span class="who">${esc(c.name)}</span>
-          <a class="where" href="${PAGE_FILES[c.page] || "index.html"}">${esc(PAGE_LABELS[c.page] || c.page)}</a></div>
+          <a class="where" href="${PAGE_FILES[c.page] || "/"}">${esc(PAGE_LABELS[c.page] || c.page)}</a></div>
         <p>${esc(c.text)}</p>
         <div class="row2"><time>${new Date(c.ts).toLocaleString()}</time>
           <button class="del" data-del="${esc(String(c.id))}">Remove</button></div>
